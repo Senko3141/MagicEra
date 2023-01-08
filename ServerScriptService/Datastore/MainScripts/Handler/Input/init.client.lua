@@ -154,50 +154,6 @@ local function StopSprintAnimations()
 	end
 	]]--
 end
---//Ledge
-
-function Anchor(Duration)
-	local bv = Instance.new("BodyVelocity")
-	bv.MaxForce = Vector3.new(math.huge, math.huge, math.huge)
-	bv.Velocity = Vector3.new(0, 0, 0)
-	bv.Parent = Character.Torso
-	wait(Duration)
-	bv:Destroy()
-end
-function Ledge()
-	if StatusFolder:FindFirstChild("LedgeCd") then return end
-	local cd = Instance.new("Folder")
-	local Part = nil
-	local p1 = Character:FindFirstChild("HumanoidRootPart").CFrame
-	local p2 = p1.lookVector*2
-	p1 = p1.p
-	local x = Instance.new("Part")
-	--	print("Ledge")
-	local rot = Character.HumanoidRootPart.CFrame - Character.HumanoidRootPart.CFrame.p
-	local pos21 = false
-	local hashit = false
-	for i = 1,20 do
-		p1 = p1 +Vector3.new(0, .3, 0)	
-		p2 = p2 +Vector3.new(0, .3, 0)
-		local ray = Ray.new(p1, p2)
-		local hit, position, normal = workspace:FindPartOnRay(ray, game.Workspace.Live)
-		if position and hit and hit.Name ~= "NoClimb" and hit.CanCollide then
-			pos21 = position
-			hashit = true
-		end
-		if not hit and hashit and pos21 then
-			game:GetService("TweenService"):Create(Player.Character.HumanoidRootPart, TweenInfo.new(.2, Enum.EasingStyle.Quad, Enum.EasingDirection.Out), {CFrame = (CFrame.new(Character:FindFirstChild("HumanoidRootPart").Position.X, (pos21.Y-2.9), Character:FindFirstChild("HumanoidRootPart").Position.Z) * rot)}):Play()
-			local Anim = Player.Character:WaitForChild("Humanoid"):LoadAnimation(script.Ledge)
-			cd.Parent = StatusFolder
-			cd.Name = "LedgeCd"
-			Debris:AddItem(cd,1)
-			Anim:Play()
-			Anchor(.215)
-			Humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
-			return true
-		end
-	end
-end
 
 -- Block Functions
 local function Block(Bool)
@@ -541,10 +497,6 @@ local ActionFunctions = {
 				Humanoid:SetStateEnabled(Enum.HumanoidStateType.Jumping, false)
 				return
 			end -- Stunned
-
-			if Humanoid.FloorMaterial == Enum.Material.Air then
-				Ledge()
-			end
 
 			-- Setting PreviousRequest
 			Info.PreviousJumpRequest = os.clock()
