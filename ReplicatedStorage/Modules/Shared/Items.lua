@@ -1,0 +1,411 @@
+--[[
+	Categories:
+	
+	Foods,
+	Potions,
+	Trainings,
+	
+	PrimaryWeapon, [Used for weapons such as Katana, Battleaxe, Greatsword, Etc]
+	Only used for when buying weapons that immediately go as your Weapon.
+	
+	Weapons [Used MAINLY as WeaponModels that go into your inventory, and become your Weapon when you click on them.]
+]]
+
+return {
+	-- FOODS --
+	["Meat"] = {
+		Name = "Meat",
+		Description = "Meat that you can eat.",
+		Price = 10,
+		MAX_BULK_AMOUNT = 20,
+		MAX_STACK = 50,
+		Category = "Foods",
+
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 10,
+	},
+
+	-- POTIONS --
+	["Health Potion"] = {
+		Name = "Health Potion",
+		Description = "your heat goes boom booom and you heal",
+		Price = 50,
+		MAX_BULK_AMOUNT = 10,
+		MAX_STACK = 20,
+		Category = "Potions",
+
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 5,
+	},
+
+	-- TRAININGS --
+	["Pushup Training"] = {
+		Name = "Pushup Training",
+		Description = "your heat goes boom booom and you heal",
+		Price = 50,
+		MAX_BULK_AMOUNT = 15,
+		MAX_STACK = 15,
+		Category = "Trainings",
+		CAN_DROP = false,
+	},
+	["Situp Training"] = {
+		Name = "Situp Training",
+		Description = "your heat goes boom booom and you heal",
+		Price = 50,
+		MAX_BULK_AMOUNT = 15,
+		MAX_STACK = 15,
+		Category = "Trainings",
+		CAN_DROP = false,
+	},
+	["Squat Training"] = {
+		Name = "Squat Training",
+		Description = "your heat goes boom booom and you heal",
+		Price = 50,
+		MAX_BULK_AMOUNT = 15,
+		MAX_STACK = 15,
+		Category = "Trainings",
+		CAN_DROP = false,
+	},
+	["Magic Training"] = {
+		Name = "Magic Training",
+		Description = "your heat goes boom booom and you heal",
+		Price = 50,
+		MAX_BULK_AMOUNT = 15,
+		MAX_STACK = 15,
+		Category = "Trainings",
+		CAN_DROP = false,
+	},
+	["Mana Training"] = {
+		Name = "Mana Training",
+		Description = "your heat goes boom booom and you heal",
+		Price = 50,
+		MAX_BULK_AMOUNT = 15,
+		MAX_STACK = 15,
+		Category = "Trainings",
+		CAN_DROP = false,
+	},
+
+	-- WEAPONS --
+	["Combat"] = {
+		Name = "Combat",
+		Description = "Weapon",
+		Price = math.huge,
+		MAX_BULK_AMOUNT = 1,
+		MAX_STACK = 1,
+		Category = "PrimaryWeapon",
+		CAN_DROP = false,
+		OVERRIDE_WEAPON = true,
+		IGNORE_CATEGORY = true,
+		
+	},
+	["Katana"] = {
+		Name = "Katana",
+		Description = "Weapon",
+		Price = 1500,
+		MAX_BULK_AMOUNT = 1,
+		MAX_STACK = 1,
+		Category = "Weapons",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1
+	},
+	["Caestus"] = {
+		Name = "Caestus",
+		Description = "Weapon",
+		Price = 1500,
+		MAX_BULK_AMOUNT = 1,
+		MAX_STACK = 1,
+		Category = "Weapons",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1
+	},
+	["Silver Gauntlet"] = {
+		Name = "Silver Gauntlet",
+		Description = "Weapon",
+		Price = 2000,
+		MAX_BULK_AMOUNT = 1,
+		MAX_STACK = 1,
+		Category = "Weapons",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1
+	},
+	["SkullSpear"] = {
+		Name = "SkullSpear",
+		Description = "Weapon",
+		Price = math.huge,
+		MAX_BULK_AMOUNT = 1,
+		MAX_STACK = 1,
+		Category = "Weapons",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1
+	},
+	["Sacred Katana"] = {
+		Name = "Sacred Katana",
+		Description = "Weapon",
+		Price = math.huge,
+		MAX_BULK_AMOUNT = 1,
+		MAX_STACK = 1,
+		Category = "Weapons",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1
+	},
+	["Baroque"] = {
+		Name = "Sacred Katana",
+		Description = "Weapon",
+		Price = math.huge,
+		MAX_BULK_AMOUNT = 1,
+		MAX_STACK = 1,
+		Category = "Weapons",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1
+	},
+	["Excalibur"] = {
+		Name = "Excalibur",
+		Description = "Weapon",
+		Price = math.huge,
+		MAX_BULK_AMOUNT = 1,
+		MAX_STACK = 1,
+		Category = "Weapons",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1
+	},
+	["Dagger"] = {
+		Name = "Dagger",
+		Description = "Weapon",
+		Price = 1000,
+		MAX_BULK_AMOUNT = 1,
+		MAX_STACK = 1,
+		Category = "Weapons",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1
+	},
+	["Greatsword"] = {
+		Name = "Greatsword",
+		Description = "Weapon",
+		Price = 1500,
+		MAX_BULK_AMOUNT = 1,
+		MAX_STACK = 1,
+		Category = "Weapons",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1
+	},
+	["Battleaxe"] = {
+		Name = "Battleaxe",
+		Description = "Weapon",
+		Price = 1500,
+		MAX_BULK_AMOUNT = 1,
+		MAX_STACK = 1,
+		Category = "Weapons",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1
+	},
+	["ScarletBlade"] = {
+		Name = "ScarletBlade",
+		Description = "Weapon",
+		Price = 5000,
+		MAX_BULK_AMOUNT = 1,
+		MAX_STACK = 1,
+		Category = "Weapons",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1
+	},
+
+
+	-- TRINKETS --
+	["Bronze Coin"] = {
+		Name = "Bronze Coin",
+		Description = "Bronze Coin",
+		Price = math.huge,
+		MAX_BULK_AMOUNT = 0,
+		MAX_STACK = math.huge,
+		Category = "Trinkets",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = math.huge,
+	},
+	["Silver Coin"] = {
+		Name = "Silver Coin",
+		Description = "Silver Coin",
+		Price = math.huge,
+		MAX_BULK_AMOUNT = 0,
+		MAX_STACK = math.huge,
+		Category = "Trinkets",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = math.huge,
+	},
+	["Gold Coin"] = {
+		Name = "Gold Coin",
+		Description = "Gold Coin",
+		Price = math.huge,
+		MAX_BULK_AMOUNT = 0,
+		MAX_STACK = math.huge,
+		Category = "Trinkets",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = math.huge,
+	},
+	["Diamond Coin"] = {
+		Name = "Diamond Coin",
+		Description = "Diamond Coin",
+		Price = math.huge,
+		MAX_BULK_AMOUNT = 0,
+		MAX_STACK = math.huge,
+		Category = "Trinkets",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = math.huge,
+	},
+	-- Collectibles --
+	["Grace Lacrima"] = {
+		Name = "Grace Lacrima",
+		Description = "Grace Lacrima",
+		Price = math.huge,
+		MAX_BULK_AMOUNT = 5,
+		MAX_STACK = 5,
+		Category = "Trinkets",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1,
+	},
+	["Dragon Lacrima"] = {
+		Name = "Dragon Lacrima",
+		Description = "Dragon Lacrima",
+		Price = math.huge,
+		MAX_BULK_AMOUNT = 5,
+		MAX_STACK = 5,
+		Category = "Trinkets",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1,
+	},
+	["Magic Book I"] = {
+		Name = "Magic Book I",
+		Description = "100 Magic EXP",
+		Price = 500,
+		MAX_BULK_AMOUNT = 5,
+		MAX_STACK = 5,
+		Category = "Trinkets",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1,
+		IGNORE_CATEGORY_CHECK = true
+	},
+	["Magic Book II"] = {
+		Name = "Magic Book II",
+		Description = "600 Magic EXP",
+		Price = 2000,
+		MAX_BULK_AMOUNT = 5,
+		MAX_STACK = 5,
+		Category = "Trinkets",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1,
+		IGNORE_CATEGORY_CHECK = true
+	},
+	["Magic Book III"] = {
+		Name = "Magic Book III",
+		Description = "3,000 Magic EXP",
+		Price = 5000,
+		MAX_BULK_AMOUNT = 5,
+		MAX_STACK = 5,
+		Category = "Trinkets",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1,
+		IGNORE_CATEGORY_CHECK = true
+	},
+	["Magic Book IV"] = {
+		Name = "Magic Book IV",
+		Description = "7,000 Magic EXP",
+		Price = 10000,
+		MAX_BULK_AMOUNT = 5,
+		MAX_STACK = 5,
+		Category = "Trinkets",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1,
+		IGNORE_CATEGORY_CHECK = true
+	},
+	--//Equipment
+	["Fairy Tail Cloak"] = {
+		Name = "Fairy Tail Cloak",
+		Description = "Equipment",
+		Price = 1,
+		MAX_BULK_AMOUNT = 5,
+		MAX_STACK = 5,
+		Category = "Equipments",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1,
+	},
+	["Scarlet Fighter"] = {
+		Name = "Scarlet Fighter",
+		Description = "Equipment",
+		Price = math.huge,
+		MAX_BULK_AMOUNT = 5,
+		MAX_STACK = 5,
+		Category = "Equipments",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1,
+	},
+	["Fairy Tail Sleeveless"] = {
+		Name = "Fairy Tail Sleeveless",
+		Description = "Equipment",
+		Price = math.huge,
+		MAX_BULK_AMOUNT = 5,
+		MAX_STACK = 5,
+		Category = "Equipments",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1,
+	},
+	["Iron Slayer"] = {
+		Name = "Iron Slayer",
+		Description = "Equipment",
+		Price = math.huge,
+		MAX_BULK_AMOUNT = 5,
+		MAX_STACK = 5,
+		Category = "Equipments",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1,
+	},
+	["Iron Drifter"] = {
+		Name = "Iron Drifter",
+		Description = "Equipment",
+		Price = math.huge,
+		MAX_BULK_AMOUNT = 5,
+		MAX_STACK = 5,
+		Category = "Equipments",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1,
+	},
+	["Leather Shoulder Pads"] = {
+		Name = "Leather Shoulder Pads",
+		Description = "Equipment",
+		Price = math.huge,
+		MAX_BULK_AMOUNT = 5,
+		MAX_STACK = 5,
+		Category = "Equipments",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1,
+	},
+	["Dragneel Cloak"] = {
+		Name = "Dragneel Cloak",
+		Description = "Equipment",
+		Price = math.huge,
+		MAX_BULK_AMOUNT = 5,
+		MAX_STACK = 5,
+		Category = "Equipments",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1,
+	},
+	["Rogue"] = {
+		Name = "Rogue",
+		Description = "Equipment",
+		Price = math.huge,
+		MAX_BULK_AMOUNT = 5,
+		MAX_STACK = 5,
+		Category = "Equipments",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1,
+	},
+	["White Beater"] = {
+		Name = "White Beater",
+		Description = "Equipment",
+		Price = math.huge,
+		MAX_BULK_AMOUNT = 5,
+		MAX_STACK = 5,
+		Category = "Equipments",
+		CAN_DROP = true,
+		MAX_DROP_COUNT = 1,
+	},
+	
+}
