@@ -1625,68 +1625,6 @@ Remotes.Clothing.OnServerEvent:connect(function(player, action, num)
 	elseif action == "Forward" then
 	elseif action == "Back" then
 	elseif action == "Purchase" then
-		local name, statTable, price = clothingMod.ReturnInformation(player, num)
-		local characterData = character:FindFirstChild("Data")
-		if player.Data:FindFirstChild("Gold").Value >= price then
-			local currentClothing = player.Data:FindFirstChild("Clothing")
-			if currentClothing.Value ~= name then
-				player.Data:FindFirstChild("Gold").Value -= price
-				local oldVariableTab = clothingMod:GetStatFromName(currentClothing.Value)
-				local variableTab = clothingMod:GetStatFromName(name)
-
-				for i,v in pairs(oldVariableTab) do
-					for a,b in pairs(characterData.Bonuses:GetChildren()) do
-						if i.Name == b.Name then
-							b.Value -= v
-						end
-					end
-				end
-
-				for i,v in pairs(variableTab) do
-					for a,b in pairs(characterData.Bonuses:GetChildren()) do
-						if i.Name == b.Name then
-							b.Value += v
-						end
-					end
-				end
-
-				--[[
-				local shirt = ReplicatedStorage.Assets.Clothes:FindFirstChild(name).Shirt:clone()
-				local pants = ReplicatedStorage.Assets.Clothes:FindFirstChild(name).Pants:clone()
-
-				for i,v in pairs(character:GetChildren()) do
-					if v:IsA("Shirt") or v:IsA("Pants") then
-						v:Destroy()
-					end
-				end
-				
-
-				shirt.Parent = character
-				pants.Parent = character
-				]]
-				player.Data:FindFirstChild("Clothing").Value = name
-
-				Remotes.Notify:FireClient(player, "You have purchased "..name.."!", 4, {
-					Sound = "Open Chest!"
-				})
-				Remotes.ClientFX:FireClient(player, "Sound", {
-					SoundName = "Cash",
-					Parent = character["HumanoidRootPart"]
-				})
-
-
-			else
-				Remotes.Notify:FireClient(player, "You're already wearing "..name.."!", 4, {
-					Sound = "Fail"
-				})
-			end
-
-		else
-			Remotes.Notify:FireClient(player, "Insufficient funds to purchase "..name.."!", 4, {
-				Sound = "Fail"
-			})
-		end
-
 	end
 end)
 
