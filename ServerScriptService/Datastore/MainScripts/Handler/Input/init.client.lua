@@ -451,12 +451,6 @@ local ActionFunctions = {
 					BodyVelocity.MaxForce = Vector3.new(50000, 0, 50000)
 					BodyVelocity.Parent = Character.HumanoidRootPart
 
-					local BodyGyro = Instance.new("BodyGyro")
-					BodyGyro.Name = "DashGyro"
-					BodyGyro.MaxTorque = Vector3.new(math.huge,math.huge,math.huge)
-					BodyGyro.D = -10
-					BodyGyro.Parent = Character.HumanoidRootPart
-
 					local Connection = nil
 					local TimePassed = 0
 
@@ -468,14 +462,11 @@ local ActionFunctions = {
 							Connection:Disconnect()
 							Connection = nil
 							Debris:AddItem(BodyVelocity, 0)
-							Debris:AddItem(BodyGyro,0)
 						else
 							TimePassed += dt
 
 							local CurrentDirection = GetDirection()
 							BodyVelocity.Velocity = CurrentDirection*Info.DashForce
-							BodyGyro.CFrame = CFrame.new(Character.HumanoidRootPart.Position,GetCameraDirection())
-
 						end
 					end)
 
